@@ -95,9 +95,9 @@ void MyClass::Foo() {
 
 ```cpp
 
-#include “a.h”
+#include "a.h"
 
-DEFINE_bool(someflag, false, “dummy flag”);
+DEFINE_bool(someflag, false, "dummy flag");
 
 class C;                    // 全局名字空间中类 C 的前置声明
 namespace a { class A; }    // a::A 的前置声明
@@ -201,7 +201,7 @@ private:
 
 定义在同一编译单元的函数，被其他编译单元直接调用可能会引入不必要的耦合和链接时依赖；静态成员函数对此尤其敏感。可以考虑提取到新类中，或者将函数置于独立库的名字空间内。
 
-如果你必须定义非成员函数，又只是在 `.cc` 文件中使用它，可使用匿名:ref:`namespaces`或 `static` 链接关键字 (如 `static int Foo() {...}``) 限定其作用域。
+如果你必须定义非成员函数，又只是在 `.cc` 文件中使用它，可使用匿名:ref:`namespaces`或 `static` 链接关键字 (如 `static int Foo() {...}`) 限定其作用域。
 
 ### 2.4. 局部变量
 
